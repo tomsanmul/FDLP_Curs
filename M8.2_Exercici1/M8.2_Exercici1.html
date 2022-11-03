@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M8.2_Exercici1</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #0000ff;
+        }
+
+        p.result2 {
+            font-family: 'sans-serif';
+            color: #ff000d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>M8.2_Exercici1</h1>
+    <p>Crea una classe en JavaScript anomenada "Ordinador", en un fitxer anomenat ordinador.js<br>
+        Aquesta classe tindrà com a atributs la marca, el model, el processador, la quantitat de memòria RAM i la capacitat del disc dur. <br>
+        A més del constructor, ha de disposar dels següents mètodes:<br>
+        mètodes que permetin consultar cadascun dels atributs (getters)<br>
+        mètodes que permetin modificar el processador, la quantitat de memòria ram i la capacitat del disc dur. (setters)<br>
+        Un mètode que rebrà un paràmetre i retornarà un frase que digui:<br>
+        "En aquests moments s'està executant: 'X'" (X és el paràmetre rebut pel mètode i que normalment serà el nom d'un programa)<br>
+        Exemple: "En aquests moments s'està executant: Chrome" <br>
+        un mètode que retornarà una descripció completa de l'ordinador (toString()).<br>
+        En un altre fitxer anomenat main.js, crea la funció crearOrdinadors().<br>
+        Dintre d'aquesta funció, demanarem a l'usuari mitjançant promtps les dades de dos ordinadors.<br> 
+        Un cop introduïdes les dades dels dos ordinadors, crida als mètodes de la classe Ordinador per comprovar que funcionen correctament.<br>
+        <br>
+    </p>
+
+    <h3>Crea una classe en JavaScript anomenada "Ordinador"</h3>
+   
+    <button onclick="crearOrdinadors()">Crear Ordinadors</button>
+    <button onclick="Executant('Chrome')">Executant...</button>
+    <br>
+    <br>
+
+    <h3>Ordinador UNO"</h3>
+    <button onclick="GetMarca(1)">Averigua la Marca</button>
+    <button onclick="GetModel(1)">Averigua el Model</button>
+    <button onclick="GetProcesador(1)">Averigua el Procesador</button>
+    <button onclick="GetRam(1)">Averigua la quantitat de la memòria RAM: </button>
+    <button onclick="GetHd(1)">Averigua la quantitat de memòria del Disc Dur: </button>
+    <br>
+    <button onclick="SetMarca(1)">Cambia la Marca</button>
+    <button onclick="SetModel(1)">Cambia el Model</button>
+    <button onclick="SetProcesador(1)">Cambia el Procesador</button>
+    <button onclick="SetRam(1)">Cambia la quantitat de la memòria RAM: </button>
+    <button onclick="SetHd(1)">Cambia la quantitat de memòria del Disc Dur: </button>
+    <br>
+    <button onclick="Mostra(1)">Mostra l'ordinador UNO</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Ordinador DOS</h3>
+    <button onclick="GetMarca(2)">Averigua la Marca</button>
+    <button onclick="GetModel(2)">Averigua el Model</button>
+    <button onclick="GetProcesador(2)">Averigua el Procesador</button>
+    <button onclick="GetRam(2)">Averigua la quantitat de la memòria RAM: </button>
+    <button onclick="GetHd(2)">Averigua la quantitat de memòria del Disc Dur: </button>
+    <br>
+    <button onclick="SetMarca(2)">Cambia la Marca</button>
+    <button onclick="SetModel(2)">Cambia el Model</button>
+    <button onclick="SetProcesador(2)">Cambia el Procesador</button>
+    <button onclick="SetRam(2)">Cambia la quantitat de la memòria RAM: </button>
+    <button onclick="SetHd(2)">Cambia la quantitat de memòria del Disc Dur: </button>
+    <br>
+    <button onclick="Mostra(2)">Mostra l'ordinador DOS</button>
+
+    
+    
+
+
+        <script src="./js/ordinador.js"></script>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>

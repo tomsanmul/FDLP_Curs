@@ -1,0 +1,35 @@
+M5_Exercici3 - EXTRA2
+
+Aquest exercici NO és obligatori, només has de fer-lo si et sobra temps i has acabat la resta d'exercicis més ràpid que la resta de la classe.
+Realitza un programa que pinti la lletra L per pantalla feta amb asteriscs.
+El programa demanarà l'altura.
+El pal horitzontal de la L tindrà una longitud de la meitat (divisió entera entre 2) de l'altura més un.
+Exemple:
+	Introduïu l'alçada de la L : 5
+	La base serà la divisió del nombre entre 2 : (5 / 2) + 1 = 3
+
+*
+*
+*
+*
+* * *
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Introdueix la altura
+let altura = parseInt(prompt("Introdueix la altura"));
+let base = parseInt((altura / 2)) + 1;
+
+//Montamos el gráfico "L" , prmiero la altura con un FOR y despues la base con otro FOR, 
+//que no estén anidados, sino uno después del otro.
+
+for(let j=1; j<=(altura-1); j++){
+            Mostrar += "*<br>";
+        }
+        
+        for(let i=1; i<=base; i++){
+            Mostrar += "* ";
+        }
+
+//Mostramos el resultado
+alert(Mostrar);

@@ -1,0 +1,33 @@
+M7.2_Exercici5
+
+L’usuari introdueix un nombre per teclat i el programa crida a una funció que indiqui si el número és primer o no.
+
+//1º Preguntamos al usuario el numero a introduir
+let numero = parseInt(prompt("Introdueix un numero:"));
+
+
+//2º El numero SI és primo si sólo puede dividirse entre 1 y él mismo.
+El número NO no es primo si además puede dividirse por cualquier otro numero comprendido entre 1 y el introducido.
+Ejemplo: 7 si es primo, porque no puede dividirse entre 2,3,4,5 y 6.
+
+Necesiton que saque el resto de la división de todos los numeros comprendidos entre 1 y él.
+Si alguno da resto 0, es que NO es primo.
+
+let i=2; //empezaré diviendo entre 2
+let primo = true;
+while ( (i < numero) && (primo == true) { //Mientras que la i sea menor que numero, y que el boolenao Primo sea TRUE
+	if (numero % i == 0){	//Si el resto de la división es 0 es que no es un numero primo.
+		primo = false;
+	}
+	i++;	//incremento en 1 la i
+}
+
+
+//3º Mostramos el resultado si es o no primo
+if (Primo == true) {
+	Alert("El numero es primo");
+}
+else
+{
+	Alert("El numero NO es primo");
+}

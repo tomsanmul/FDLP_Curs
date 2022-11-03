@@ -1,0 +1,20 @@
+M7.2_Exercici7
+
+L’usuari introdueix un any a per teclat
+i el programa crida a una funció que indiqui l’any és de traspàs o no.
+
+
+
+//Preguntamos al usuari el anyo
+let Any = parseInt(prompt("Introdueix un any: "));
+
+
+//Si el resto de la división de Any entre 4 es 0, es que es bisiesto
+
+If ((Any % 4) == 0){
+	alert("El año " + Any + " SI es bisiesto.");
+else
+	alert("El año " + Any + " NO es bisiesto.");
+}
+
+

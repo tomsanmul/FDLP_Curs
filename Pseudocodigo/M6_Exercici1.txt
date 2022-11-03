@@ -1,0 +1,46 @@
+M7.3_Exercici7
+
+Aquest programa calcula l'edat mitjana d'un número de persones introduït per teclat.
+S'ha de crear una funció que s'encarregui de demanar les edats a l'usuari i de calcular l'edat mitjana.
+
+La funció rebrà per paràmetre el nº de persones a qui ha de demanar l'edat.
+L'edat de les persones només serà vàlida si està compresa entre 0 i 120 anys.
+La mitjana de les edats introduïdes s'ha de retornar per la funció (return).
+----------------------------------------------
+
+
+
+
+let PrecioCalamares = document.getElementById("calamares").value;
+let PrecioGambas = document.getElementById("gambas").value;
+let Personas = document.getElementById("amics").value;
+let PrecioPersona, PrecioFideua, CantidadFideos, CantidadCalamares, CantidadGambas;
+
+
+
+//2º CALCULAMOS LAS OPERACIONES:
+//Si 4 personas consumen: 500 gr de fideos, 400 gr calamares y 200 gr gambas,  entonces deducimos que....
+//...que 1 persona consume: 125 gr de fideos, 100 gr calamares y 50 gr gambas.
+// Por lo tanto calculas las cantidades necesarias de cada ingrediente   
+
+CantidadFideos = (Personas * 125)/1000;
+CantidadCalamares = (Personas * 100)/1000;
+CantidadGambas = (Personas x 50)/1000;
+
+//Ahora calculamos el precio total de la fideua:
+PrecioFideua = (CantidadFideos * PrecioFideos) + (CantidadCalamares * PrecioCalamares) + (CantidadGambas * PrecioGambas);
+
+//Ahora calculamos el precio por persona, solamente hay que dividir el precio Total de la Fideua entre el nº de Amigos:
+PrecioPersona = PrecioFideua / Personas;
+
+
+
+//3º TODO LISTO y mostramos por pantallas los resultados.
+alert(CantidadFideos);
+alertCantidadCalamares
+alertCantidadGambas);
+alert(PrecioPersona);
+alert(PrecioFideua);
+
+
+

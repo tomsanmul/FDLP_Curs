@@ -1,0 +1,44 @@
+M7.3_Exercici7
+
+Un grup d’amics ha quedat per fer una fideuà, els ingredients principals seran: fideus, gambes, i calamars. 
+Saben que per cada quatre persones han d’utilitzar mig quilo de fideus, 400 grams de calamars i 200 grams de gambes. 
+S’ha de fer un programa que demani per pantalla el preu per quilo de cada ingredient i el nombre d’amics que seran per dinar. 
+El programa ha de calcular les quantitats necessàries de cada ingredient, el preu per persona i el preu final de la fideuà
+----------------------------------------------
+
+//1º Declaramos variables y recogemos datos
+
+let PrecioFideos = document.getElementById("fideos").value;
+let PrecioCalamares = document.getElementById("calamares").value;
+let PrecioGambas = document.getElementById("gambas").value;
+let Personas = document.getElementById("amics").value;
+let PrecioPersona, PrecioFideua, CantidadFideos, CantidadCalamares, CantidadGambas;
+
+
+
+//2º CALCULAMOS LAS OPERACIONES:
+//Si 4 personas consumen: 500 gr de fideos, 400 gr calamares y 200 gr gambas,  entonces deducimos que....
+//...que 1 persona consume: 125 gr de fideos, 100 gr calamares y 50 gr gambas.
+// Por lo tanto calculas las cantidades necesarias de cada ingrediente   
+
+CantidadFideos = (Personas * 125)/1000;
+CantidadCalamares = (Personas * 100)/1000;
+CantidadGambas = (Personas x 50)/1000;
+
+//Ahora calculamos el precio total de la fideua:
+PrecioFideua = (CantidadFideos * PrecioFideos) + (CantidadCalamares * PrecioCalamares) + (CantidadGambas * PrecioGambas);
+
+//Ahora calculamos el precio por persona, solamente hay que dividir el precio Total de la Fideua entre el nº de Amigos:
+PrecioPersona = PrecioFideua / Personas;
+
+
+
+//3º TODO LISTO y mostramos por pantallas los resultados.
+alert(CantidadFideos);
+alertCantidadCalamares
+alertCantidadGambas);
+alert(PrecioPersona);
+alert(PrecioFideua);
+
+
+

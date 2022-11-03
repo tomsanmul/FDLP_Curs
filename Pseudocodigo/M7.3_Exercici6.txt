@@ -1,0 +1,28 @@
+M7.3_Exercici6
+
+Dona’t un array de números, el programa ha de mostrar la suma de tots els números parells i la suma de tots els números imparells.
+
+
+//1º Introducimos la serie de numeros en un array.
+let listaNumeros = [1,2,3,4,5,6,7,8,9];
+
+//También declaro 2 variables SumaPares y SumaImpares donde iré acumulando el resultado de cada una
+let SumaPares = 0;
+let SumaImpares = 0;
+
+
+//2 Recorremos el array y vamos sumando los pares y los impares con un bucle FOR:
+          
+for (let i=0; i < listaNumeros.lenght; i++){
+	if (listaNumeros[i] % 2 == 0){	// Si el numero es par, lo sumo a la variable SumaPares
+		SumaPares += listaNumeros[i];
+	}
+	else				// Sino, el numero es impar y lo añado a la variable SumaImpares
+		SumaImpares += listaNumeros[i];
+	}
+}
+
+
+//3º Mostramos los resultados, la Suma de Pares y Impares
+Alert(SumaPares)
+Alert(SumaImpares)

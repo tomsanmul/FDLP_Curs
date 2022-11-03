@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M8.2_Exercici4</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: 'sans-serif';
+            color: #0000ff;
+        }
+
+        p.result2 {
+            font-family: 'sans-serif';
+            color: #ff000d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>M8.2_Exercici4</h1>
+    <p>Fer una aplicació on l'usuari introdueix les coordenades x, y de dos cercles i els seus respectius radis.<br>
+        Crear la classe Punt i la classe Cercle: <br>
+        Classe Punt<br>
+        La classe Punt tindrà els atributs posicioX i posicioY. A més, tindrà el constructor parametritzat amb tots els atributs de la classe.  <br>
+        Classe Cercle  <br>
+        La classe Cercle tindrà els atributs centre (un punt) i el radi (distància entre el centre i qualsevol punt de la circumferència. A més, tindrà el constructor amb tots els paràmetres i els següents mètodes: <br>    
+        ⦁ distanciaCentres(altreCercle): Retorna la distància entre el centre del cercle actual i el rebut com a paràmetre. <br>   
+        ⦁ equals(altreCercle): Retorna true si dos cercles són iguals (si tenen el mateix centre i el mateix radi). <br>
+        ⦁ sonConcentrics(altreCercle): Retorna true si dos cercles són concèntrics (tenen igual centre). <br>    
+        ⦁ tenenIgualRadi(altreCercle): Retorna true si dos cercles tenen el mateix radi. <br>     
+        ⦁ sonTangents(altreCercle): Retorna true si dos cercles són tangents. <br>      
+        ⦁ sonSecants(altreCercle): Retorna true si dos cercles són secants. <br>     
+        ⦁ noEsToquen(altreCercle): Retorna true si dos cercles no es toquen. <br>    
+        Al final l'aplicació mostrarà per pantalla el resultat de fer la crida a tots els mètodes de la classe Cercle. <br>
+    </p>
+<br>
+<br>
+<b>Cercle 1:</b>
+ <table style="width: 400px; height: 50px;">
+    <tbody>
+        <tr>
+            <td><label>PosicioX:</label></td>
+            <td><input id="PosX1" size="3" type="text" value="3"></td>
+            <td><label>PosicioY:</label></td>
+            <td><input id="PosY1" size="3" type="text" value="2"></td>
+            <td><label>Radi:</label></td>
+            <td><input id="Radio1" size="3" type="text" value="5"></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<b>Cercle 2:</b>
+<table style="width: 400px; height: 50px;">
+    <tbody>
+        <tr>
+            <td><label>PosicioX:</label></td>
+            <td><input id="PosX2" size="3" type="text" value="2"></td>
+            <td><label>PosicioY:</label></td>
+            <td><input id="PosY2" size="3" type="text" value="7"></td>
+            <td><label>Radi:</label></td>
+            <td><input id="Radio2" size="3" type="text" value="3"></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+    <button onclick="Calcula()">Calcula Cercles</button>
+<br>
+<p id="resultatdistancia"></p>
+<p id="SonIguals"></p>
+<p id="SonConcentrics"></p>
+<p id="TenenIgualRadi"></p>
+<p id="SonTangents"></p>
+<p id="SonSecants"></p>
+<p id="NoEsToquen"></p>
+
+
+        <script src="./js/clases.js"></script>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>

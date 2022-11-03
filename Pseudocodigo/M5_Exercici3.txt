@@ -1,0 +1,31 @@
+M5_Exercici3
+
+Aquesta línia de codi: Math.ceil((Math.random() * 10));  Retorna un número entre el 0 i el 10 de forma aleatòria.
+L’exercici consisteix a què l’usuari ha d'endevinar el número escollit aleatòriament pel programa.  
+El programa, demana números a l’usuari fins que aquest encerti el número aleatori generat pel programa.
+Un cop l’usuari ha endevinat el número, es mostrarà per pantalla el següent missatge: “Enhorabona, el número era X”
+
+----------------------------------------------------------------------------------------------------------------
+
+// Primero. Creamos el numero aleatorio en 1 y 10. Y lo guardamos
+let numero = Math.ceil((Math.random() * 10));
+
+
+//Segundo, entramos en el bucle y vamos preguntando mientras no adivinemos el numero Random
+Lo hago con DO - WHILE porque vamos ir preguntando, mientras que no acertemos el numero (al final).
+   
+let num_Usuari=0;
+
+do {
+    num_Usuari = parseInt(prompt("Introdueix un numero del 1 al 10 per adivinar...."));    
+    } 
+while (numero != num_Usuari);   //Mientras el numero sea distinto del del ordenador creado, seguimos qui dentro.
+
+
+//Salida del bucle porque lo adivinamos. Mostramos el numero y mensaje
+alert("Enhorabona, el número era " + numero);
+
+
+
+
+

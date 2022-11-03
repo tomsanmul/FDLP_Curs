@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M8.2_Exercici5</title>
+    <style>
+        body {
+            margin: auto;
+            font-family: 'Nunito', 'Open Sans';
+            background-color: lightgray;
+        }
+
+        .result1 {
+            color: #0000ff;
+        }
+
+        .result2 {
+            color: #ff000d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>M8.2_Exercici5</h1> 
+    <p>La ciutat de Barcelona, com qualsevol ciutat, està formada per un nombre molt gran d’edificis. Hi ha moltes classes d’edificis: edificis d’habitatges, hospitals, escoles, blocs d’apartaments, blocs d’oficines, hotels, cinemes, etc.<br>
+        L’exercici proposat consistirà en crear una aplicació que contindrà una classe Edifici i diverses classes derivades. No s’instanciarà cap objecte de la classe Edifici, sinó que s’instanciaran objectes de les classes derivades d’aquesta.  Les classes derivades són: Hotel, Hospital i Cinema.<br>
+        Tots els edificis tindran certes dades comunes (nom, número de plantes, superficie (m²)) que es donaran en crear l’edifici i no es modificaran, però sí que s’haurà de poder accedir a elles per llegir-les.<br>
+        Es crearà un mètode netejar() en la classe adient, la qual mostrarà per pantalla el temps que s’ha trigat a netejar l’edifici, tenint en compte que es triga en netejar un minut per cada 5 m². A més, si un edifici té més d’una planta, es triga a pujar mig minut d’una planta a una altra. Per tant, afegirem mig minut per cada planta addicional. Per cada minut de feina es pagarà un euro diari. A més, com que es neteja cada dia, per obtenir el cost mensual, haurem de multiplicar per 30 (aquest cost mensual també es mostrarà per pantalla) <br>
+        A més, s’implementarà un mètode anomenat calcularCostVigilancia() que mostrarà el que costa al mes contractar vigilants a cada edifici. Es considera que cada vigilant d’hotel o hospital pot vigilar 1000 m². Per tant, si un edifici té una superfície de 5500 m², necessitarem 6 vigilants. En canvi, els vigilants dels cinemes poden vigilar 3000 m². Contractar cada vigilant costa als propietaris de l’edifici 1.300 euros mensuals, però els vigilants d’hotels cobren un plus de perillositat de 500 euros mensuals. <br>
+        A l’hospital es reparteix dinar pels malalts tres vegades al dia. Hi haurà un mètode repartirDinar() en el lloc adient que mostrarà, quan sigui cridat, el missatge “S’estan repartint xxx racions”. Aquest número pot variar al llarg del temps, i per tant, s’haurà de permetre accedir a l’atribut corresponent, tant per llegir-lo com per modificar-lo, encara que no es faci directament. <br>
+        Al cinema es crearà la funció projectarSessio(), que mostrarà el missatge “S’han recaptat xxx.xx euros”, tenint en compte que, per calcular la recaptació, s’ha de multiplicar el preu d’una entrada pel número d’assistents a la sessió, que no podrà superar l’aforament màxim. Per tant, la funció projectarSessió haurà de rebre com a paràmetres el número d’assistents i el preu de l’entrada per aquella sessió. El número d’assistents a la sessió no pot ser més gran que l’aforament total de la sala. <br>
+        En els hotels cada dia passa el servei d’habitacions. Es calcula que cada membre del servei pot atendre 20 habitacions. Es crearà un mètode que calculi, i mostri per pantalla: a) Quantes persones són necessàries per atendre el servei d’habitacions l’hotel. b) Quin és el total necessari pels sous d’aquestes persones, tenint en compte que cada persona cobra 1.000 euros al mes. <br><br>
+        Exemples:  <b><FONT COLOR="red">(Edificis ja carregats en memòria per defecte:)</FONT></b> <br><br>
+         - L’”<b>Hospital de Vilafranca</b>”, de 1.950 m² i 2 plantes. En aquest moment té 26 malalts.  <br>
+         - L’”<b>Hospital General de Catalunya</b>”, de 25.350 m² i 10 plantes. En aquest moment té 315 malalts.  <br>
+         - El “<b>Cinema Montecarlo</b>”, de  3180 m² i 1 planta. <br>
+         - El “<b>Cinema Principal</b>”, de 12.450 m² i 2 plantes. <br>
+         - L’”<b>Hotel Hilton</b>”, de 73.858 m² i 22 plantes. Té 583 habitacions.  <br>
+         - L’”<b>Hotel Pepita</b>”, de 593 m² i 3 plantes. Té 12 habitacions. <br><br>
+        L'aplicació ha de ser capaç de donar d'alta, mostrar i eliminar edificis. Al cridar el mètode mostrar, cridarem a tots els mètodes de l'edifici en qüestió per veure totes les seves dades per pantalla. <br>
+        <br>
+    </p>
+<b>Edificis</b>
+<br><br>
+
+<button onclick="Crear()">Crear Edifici</button>
+<button onclick="Eliminar()">Eliminar Edifici</button>
+<button onclick="MostrarArrays()">Mostra Tots els Edificis</button>
+<button onclick="ParaBuscar()">Buscar Edifici</button>
+
+<br>
+<br>
+<div>
+   
+   <table bgcolor="#c9f0c2"; width=900px; border = "1">
+            <tr>
+                <td width=120px;><label>Nom: </label></td>
+                <td ><label class="result1" id="Nom"></label></td>
+            </tr>
+            <tr>
+                <td width=120px;><label>Plantes: </label></td>
+                <td><label class="result1" id="Plantes"></label></td>
+            </tr>    
+            <tr>
+                <td width=120px;><label>Superficie: </label></td>
+                <td><label class="result1" id="Superficie"></label></td>
+            </tr>
+            <tr>
+                <td width=120px;><label>Cost Neteja: </label></td>
+                <td><label class="result1" id="Neteja"></label></td>
+            </tr>
+            <tr>
+                <td width=120px;><label>Cost Vigilància: </label></td>
+                <td><label class="result1" id="Vigilancia"></label></td>
+            </tr>
+            <tr>
+                <td width=120px;><label>Informació: </label></td>
+                <td><label class="result2" id="Informacio"></label></td>
+            </tr>
+    </table>
+</div>
+
+    
+  
+        <script src="./js/edifici.js"></script>
+        <script src="./js/hospital.js"></script>
+        <script src="./js/hotel.js"></script>
+        <script src="./js/cine.js"></script>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>

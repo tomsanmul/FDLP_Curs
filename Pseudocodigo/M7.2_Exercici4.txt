@@ -1,0 +1,24 @@
+M7.2_Exercici4
+
+Realitzar un programa on l’usuari introdueix un número i el programa crida a una funció que retorna el factorial del número introduit.
+El factorial d'un nombre n (enter, no negatiu) és el producte de tots els nombres enters positius inferiors o iguals a n. 
+
+
+//1º Preguntamos al usuario el numero a introduir
+let numero = parseInt(prompt("Introdueix un numero:"));
+
+
+
+//2º Ejemplo: El factorial de 5 seria: 1*2*3*4*5 = 120, entonces, necesito 1 FOR desde 2 hasta 5, 
+inicializando la varible "factorial" a 1, para evitar el error de 0 * 1.
+
+let factorial=1;
+
+for (let i=2; i<= numero; i++){
+     factorial = factorial * i;   //vamos acumulando el resultado
+}
+
+
+
+//3º Mostramos el facotorial
+Alert(factorial);

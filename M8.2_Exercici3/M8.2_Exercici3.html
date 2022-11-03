@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M8.2_Exercici3</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: 'sans-serif';
+            color: #0000ff;
+        }
+
+        p.result2 {
+            font-family: 'sans-serif';
+            color: #ff000d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>M8.2_Exercici3</h1>
+    <p>Dona't el diagrama de classes de la imatge.<br>
+        Programa una aplicació que tingui 5 botons:<br>
+        1.- Crear client<br>
+        2.- Eliminar client<br>
+        3.- Crear compta d'un client<br>
+        4.- Ingresar euros en una compta d'un client<br>
+        5.- Retirar euros en una compta d'un client<br>
+        A tenir en compte:<br>
+        - El saldo inicial de totes les comptes ha de ser 0€<br>
+        - Al crear un client, no haurà de tenir cap compte "associada"<br>
+        - El diagrama UML mostra les propietats i mètodes mínims que han de tenir les classes, però pots crear-ne més si és necessari. <br>
+    </p>
+<br>
+    <h3>Gestió de Comptes</h3>
+ <br>
+    <button onclick="Crear()">Crear Client</button>
+    <button onclick="Eliminar()">Eliminar Client</button>
+    <button onclick="MostrarArray()">Mostra Tots els Clientes i comptes</button>
+    <button onclick="ParaBuscar()">Buscar Client</button>
+    <br>
+    <br>
+    <br>
+    <h4>Client:</h4>
+    <br>
+    <div>
+        <table border="2">
+            <tbody>
+                <tr>
+                    <td style="width: 150px"><label>DNI: </label></td>
+                    <td style="width: 300px"><label class="result2" id="Dni"></label></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px"><label>Nom: </label></td>
+                    <td style="width: 300px"><label class="result1" id="Nom"></label></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px"><label>Cognoms: </label></td>
+                    <td style="width: 300px"><label class="result1" id="Cognoms"></label></td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <tr>
+            <td style="width: 150px"><b><label>Comptes del Client:</label></b></td>
+        </tr>
+        <br>
+        <br>
+        <p class="result1" id="Comptes" ></p>
+        <br>
+        <button onclick="CrearCC()">Crear compte d'aquest client</button>    
+        <button onclick="IngresaCC()">Ingresa en un compte d'aquest client</button>  
+        <button onclick="RetiraCC()">Retira d'un compte d'aquest client</button>
+
+    </div>
+
+        <script src="./js/cliente.js"></script>
+        <script src="./js/cuenta.js"></script>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>

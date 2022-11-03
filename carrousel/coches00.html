@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Carrousel</title>
+        <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="tema"></h1>
+            <p><input type="button" onclick="agregarImagen()" value="Agregar"/>    <input type="button" onclick="encontrarImagen()" value="Buscar"/>    <input type="button" onclick="modificarImagen()" value="Modificar"/>    <input type="button" onclick="eliminarImagen()" value="Eliminar"/></p>
+            <p><img id="imagen" title='' alt='' src="./img/audi.jpg"></p>
+            <p> <input type="button" onclick="retroceder()" value="Retroceder"/>
+                <input type="button" onclick="play()" value="Reproducir"/>
+                <span id="nombreImagen"></span>
+                <input type="button" onclick="stop()" value="Parar"/>
+                <input type="button" onclick="avanzar()" value="Avanzar"/>
+                
+            </p>
+
+            <p id="desc"></p>
+        </div>
+       
+        <script src="./js/imagenes.js"></script>
+        <script src="./js/carrousel.js"></script>
+        <script src="./js/operaciones.js"></script>
+    </body>
+</html>

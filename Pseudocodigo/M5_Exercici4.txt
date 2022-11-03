@@ -1,0 +1,44 @@
+M5_Exercici4
+
+Has de modificar el programa anterior per afegir una nova funcionalitat: establir un número màxim de 5 intents.
+Si l’usuari encerta el número escollit pel programa abans d'aquests 5 intents, el programa mostra el següent missatge per pantalla: “Enhorabona, el número és X i has necessitat Y intents per encertar-lo”.  
+Si no encerta el número abans de 5 intents, el programa mostra per pentalla: "Has utilitzat massa intents! El número és X .
+
+----------------------------------------------------------------------------------------------------------------
+
+// Primero. Creamos el numero aleatorio en 1 y 10. Y lo guardamos
+let numero = Math.ceil((Math.random() * 10));
+
+
+//Segundo, entramos en el bucle y vamos preguntando mientras no adivinemos el numero Random
+Lo hago con DO - WHILE porque vamos ir preguntando, mientras que no acertemos el numero (al final).
+   
+let num_Usuari=0;
+
+//Entramos en bucle, mientras no adivinemos el numero Random y los intentos sean menores de 5 (iré sumando de 1 en 1).  
+let num_Usuari=0;
+let intents=0;
+
+do {
+    num_Usuari = parseInt(prompt("Introdueix un numero del 1 al 10 per adivinar...."));    
+    intents++;
+    } 
+while ((numero != num_Usuari) && (intents <5));  //Mientras el numero sea distinto del del ordenador creado, y intentos < 5;
+
+
+
+//Salida del bucle porque lo adivinamos o porque nos pasamos de los intentos. 
+Según condición IF mostramos un mensaje o otro:
+
+ if (intents < 5){
+   alert("Enhorabona, el número és " + numero + " i has necessitat " + intents + " intents per encertar-lo");        
+}
+else
+{
+   alert("Has utilitzat massa intents! El número és " + numero);
+}
+
+
+
+
+

@@ -1,0 +1,42 @@
+M5_Exercici5
+
+Has de modificar el programa de les beques (ara el programa només ha de poder donar 5 beques).<br>
+El programa anirà demanant les dades dels alumnes fins que es donin aquestes 5 beques. <br>
+Un cop el programa hagi assignat les 5 beques s’ha de mostrar per pantalla els noms dels 5 alumnes que tenen beca.<br>
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+//1º Declaramos variables y pedimos datos:
+
+let nom, edad, titol, atur, Numero_Beques, array_Alumnes = [];
+
+
+
+Numero_Beques = 5;  //Solo hay 5 Becas y lo iré restando en función de que los alumnos se vayan introduciendo y guardando en el array.
+
+do
+    {
+	nom = prompt("Introdueix el teu nom: ");  
+	edad = parseInt(prompt("Introdueix la teva edad: "));
+	titol = prompt("Tens Títol Universitari?", "Si").toLowerCase();
+	atur = prompt("Estas a l'Atur?", "Si").toLowerCase();
+
+               
+	//DECIDIMOS SI TIENE BECA 
+	if (((edad >= 18) && (titol == "si")) || (atur == "si")) {	//SI TIENE BECA
+		alert("SI tens BECA");
+		array_Alumnes.push(nom);    //Guardamos el nombre en una lista
+		Numero_Beques --;           //Restamos 1 del numero de 5 Becas disponibles.
+                } 
+         else 
+                {
+                alert("NO tens BECA");	//SINO MENSAJE DE QUE NO TIENE BECA Y NO HACEMOS NADA MÁS.
+                }
+            }
+        while (Numero_Beques != 0) //MIENTRAS QUE HAYAN BECAS DISPONBILES (hasta 0)
+
+
+
+//3º Mostramos por pantalla los alumnos que si tienen Beca, que hemos ido guardando el el array_Alumnes
+alert(array_Alumnes);

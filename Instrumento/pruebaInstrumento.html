@@ -1,0 +1,46 @@
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Probar Instrumento de Cuerda</title>
+</head>
+<body>
+   <button onclick="crear()">Crear Instrumento</button>
+   <button onclick="tocarGuitarra()">Tocar Guitarra</button>
+   <button onclick="cambiarTipo()">Cambiar tipo guitarra</button>
+
+   <script src="./claseInstrumento.js"></script>
+   <script>
+      let guitarraJairo;
+
+      function crear() {
+         let tipo, marca, material, numeroCuerdas, color;
+         
+         tipo = "Guitarra Eléctrica";
+         marca= prompt("Indica la marca", "Fender");
+         material = prompt("Material de " + tipo, "Madera de Arce");
+         numeroCuerdas = prompt("¿Cuántas cuerdas tiene?", "6");
+         color = prompt("¿De qué color es?", "Caoba");
+
+         guitarraJairo = new InstrumentoCuerda(tipo, marca, material, numeroCuerdas, color);
+         console.log(guitarraJairo);
+
+      }
+
+      function Executant() {
+         guitarraJairo.tocarNota("Sol");
+      }
+
+      function cambiarTipo() {
+         alert("La Guitarrà de Jairo es una " + guitarraJairo.getTipo());
+         let nuevoTipo = prompt("¿Qué tipo de Guitarra es?", "Guitarra Acústica");
+         guitarraJairo.setTipo(nuevoTipo);
+         alert(guitarraJairo);
+      }
+
+   </script>
+
+
+</body>
+</html>

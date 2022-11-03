@@ -1,0 +1,41 @@
+M7.2_Exercici2
+
+Fes un programa que mostri el següent per pantalla:
+
+* * * * * *
+* * * * *
+* * * *	
+* * *
+* *
+*
+
+El nombre de línies formades per “*” vindrà donat per un número que l’usuari introduirà per teclat.<br>
+Condició: En tot el codi del programa només hi pot haver un * <br>
+també, a poder ser, no utilitzis cap mètode com repeat() o substring() de la classe String <br>
+
+----------------------------------------------------------------------------------------------------
+ES EL MISMO EJERCICO QUE EL ANTERIOR SÓLO QUE VA AL REVÉS.
+-----------------------------------------------------------
+
+
+//Declaro 2 variables, una para montar el string, y la otra para pedir las lineas
+
+let Mostrar ="";
+let lineas = parseInt(prompt("Introdueix el nombre de lineas: "));
+
+
+
+//Necesito 2 bucles For, el pimero para añadir asteriscos y el segundo para saltar de linea 
+
+For (j=lineas; j>0; j--){  		//Mientras que la "j" sea mayor que 0, restaremos 1 cada vez. VA AL REVÉS AQUI.
+
+  fori=1; i<=j; i++){   		//Y mientras que la "i" sea más pequeña que la "j", añadimos 1 asterico
+         Mostrar = Mostrar + "* ";  	//añado 1 asteriscos las veces que sean necesarias "i"
+	}
+Mostrar = Mostrar + "<br>"; 		//añado salto de linea, hasta que la última "j"
+
+}	
+
+
+//Muestro el resultado
+alert(Mostrar);
