@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.3_Exercici3</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #030303;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>M7.3_Exercici3</h1>
+    <p>L’usuari ha d’introduir una frase i el programa ha de dir si la frase és un palíndrom<br>
+    </p>
+    <br>
+    <h3>Averiguar si la frase es Palíndrome</h3>
+    <table style="width: 660px; height: 50px;">
+        <tbody>
+            <tr>
+                <td style="width: 177.266px;"><label>Introdueix una frase: </label></td>
+                <td style="width: 466.734px;"><input id="cadena" size="60" type="text" value="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><input type="button" value="Comprueba Palindrome" onclick="executa()" /> <br /></p>
+    <br>
+    <p id="resultado"></p>
+
+
+
+    <script>
+        "use strict";
+
+        function RevisaPalindrome(frase) {
+            let cadena = frase.toLowerCase(); //pasamos la rfase a minúsculas para comparar si es palíndrome.
+            let cadenareves = "";
+
+            cadena = cadena.replace(/[ ,.]/g, ""); //Quitamos los puntos, las comas y los espacios en blanco.
+            cadena = cadena.normalize('NFD').replace(/[\u0300-\u036f]/g, ""); //Quitamos los acentos
+
+            for (let i = cadena.length; i >= 0; i--) {
+                cadenareves += cadena.charAt(i);
+            }
+
+            if (cadena == cadenareves) return "SI";
+            else return "NO";
+        }
+
+        function executa() {
+
+            let resultado = RevisaPalindrome(document.getElementById("cadena").value);
+
+            document.getElementById("resultado").innerHTML = "La frase ''<b>" + document.getElementById("cadena")
+                .value + "''</b> " + resultado + " es palíndrome.";
+        }
+    </script>
+</body>
+
+</html>

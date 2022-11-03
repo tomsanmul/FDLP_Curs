@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Exercici 6</title>
+</head>
+
+<body>
+    <h1>M4 Exercici 6</h1>
+    <p> Fer un programa que demani a l’usuari quin dia i quin mes va néixer, amb aquesta informació el programa mostra per pantalla, de quin signe del zodíac és.
+
+        Àries-Aries (21.03 — 19.04)
+        Taure-Tauro (20.04 — 20.05)
+        Bessons-Géminis (21.05 — 20.06)
+        Cranc-Cáncer (21.06 — 22.07)
+        LLeó-Leo (23.07 — 22.08)
+        Verge-Virgo (23.08 — 22.09)
+        Balança-Libra (23.09 — 22.10)
+        Escorpi-Escorpio (23.10 — 21.11)
+        Sagitario-Sagitario (22.11 — 21.12)
+        Capricorn-Capricornio (22.12 — 19.01)
+        Aquari-Acuario (20.01 — 18.02)
+        Peixos-Piscis (19.02 — 20.03)
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+       "use strict";
+
+        let dia, mes, signo;
+        
+        dia = parseInt(prompt("Quin dia vas néixer (en numero):"));
+        mes = parseInt(prompt("Quin mes vas néixer? (en numero):"));
+
+        switch (mes) {
+            case 1: signo = (dia <= 19) ? "Capricorn" : "Aquari"; break;
+            case 2: signo = (dia <= 19) ? "Aquari" : "Peixos"; break;
+            case 3: signo = (dia <= 19) ? "Peixos" : "Àries"; break;
+            case 4: signo = (dia <= 19) ? "Àries" : "Taure"; break;
+            case 5: signo = (dia <= 19) ? "Taure" : "Bessons"; break;
+            case 6: signo = (dia <= 19) ? "Bessons" : "Cranc";break;
+            case 7: signo = (dia <= 19) ? "Cranc" : "Lleó";break;
+            case 8: signo = (dia <= 19) ? "Lleó" : "Verge";break;
+            case 9: signo = (dia <= 19) ? "Verge" : "Balança";break;
+            case 10: signo = (dia <= 19) ? "Balança" : "Escorpi";break;
+            case 11: signo = (dia <= 19) ? "Escorpi" : "Sagitari";break;
+            case 12: signo = (dia <= 19) ? "Sagitari" : "Capricorn";break;
+            
+            default:
+                alert("No has introduït un mes o dia vàlid");
+                break
+        }
+
+ document.getElementById("mostrar").innerHTML = "Ets del signne: " + signo;
+
+
+/*   ASÍ LO HICE LA 1ª VEZ, CON UN IF DENTRO DE CADA CASE, PERO ERA MUCHO MÁS LARGO.
+
+
+        switch (mes) {
+            case 1: 
+                if (dia <= 19) {
+                        signo = "Capricorn";
+                        break
+                }
+                else
+                {
+                        signo = "Aquari";
+                        break
+                }
+
+            case 2: 
+
+                if (dia <= 19) {
+                        signo = "Aquari";
+                        break
+                }
+                else
+                {
+                        signo = "Peixos";
+                        break
+                }
+
+            case 3: 
+
+                if (dia <= 19) {
+                    signo = "Peixos";
+                    break
+                }
+                else
+                    {
+                    signo = "Àries";
+                break   
+                }
+
+            case 4: 
+
+                if (dia <= 19) {
+                    signo = "Àries";
+                    break
+                }
+                else
+                    {
+                    signo = "Taure";
+                break   
+                }
+
+            case 5: 
+
+                if (dia <= 19) {
+                    signo = "Taure";
+                    break
+                }
+                else
+                {
+                    signo = "Bessons";
+                break   
+                }
+
+            case 6: 
+
+                if (dia <= 19) {
+                    signo = "Bessons";
+                    break
+                }
+                else
+                {
+                    signo = "Cranc";
+                    break   
+                }
+
+            case 7: 
+                if (dia <= 19) {
+                        signo = "Cranc";
+                        break
+                }
+                else
+                {
+                        signo = "Lleó";
+                        break
+                }
+
+            case 8: 
+
+                if (dia <= 19) {
+                        signo = "Lleó";
+                        break
+                }
+                else
+                {
+                        signo = "Verge";
+                        break
+                }
+
+            case 9: 
+
+                if (dia <= 19) {
+                    signo = "Verge";
+                    break
+                }
+                else
+                    {
+                    signo = "Balança";
+                break   
+                }
+
+            case 10: 
+
+                if (dia <= 19) {
+                    signo = "Balança";
+                    break
+                }
+                else
+                    {
+                    signo = "Escorpí";
+                break   
+                }
+
+            case 11: 
+
+                if (dia <= 19) {
+                    signo = "Escorpí";
+                    break
+                }
+                else
+                {
+                    signo = "Sagitari";
+                break   
+                }
+
+            case 12: 
+
+                if (dia <= 19) {
+                    signo = "Sagitari";
+                    break
+                }
+                else
+                {
+                    signo = "Capricorn";
+                    break   
+                }
+
+            
+            default:
+                alert("No has introduït un mes o dia vàlid");
+                break
+        }
+
+
+         document.getElementById("mostrar").innerHTML = "Ets del signne: " + signo;
+        */
+
+
+    
+    </script>
+</body>
+
+</html>

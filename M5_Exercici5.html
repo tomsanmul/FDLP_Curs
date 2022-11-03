@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 Exercici 5</title>
+</head>
+
+<body>
+    <h1>M5 Exercici 5</h1>
+    <p> Has de modificar el programa de les beques (ara el programa només ha de poder donar 5 beques).<br>
+        El programa anirà demanant les dades dels alumnes fins que es donin aquestes 5 beques. <br>
+        Un cop el programa hagi assignat les 5 beques s’ha de mostrar per pantalla els noms dels 5 alumnes que tenen beca.<br>
+        
+        .</p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos variables y pedimos datos:
+        let nom, edad, titol, atur;
+        let Numero_Beques = 5;
+        let array_Alumnes = [];
+
+        do
+            {
+                nom = prompt("Introdueix el teu nom: ");  
+                edad = parseInt(prompt("Introdueix la teva edad: "));
+                titol = prompt("Tens Títol Universitari?", "Si").toLowerCase();
+                atur = prompt("Estas a l'Atur?", "Si").toLowerCase();
+               
+                //2º En funón de las respuestas se decide si tiene beca o no
+                if (((edad >= 18) && (titol == "si")) || (atur == "si")) {
+                    alert("SI tens BECA");
+                    array_Alumnes.push(nom);    //Guardamos el nombre en una lista
+                    Numero_Beques --;           //Restamos 1 del numero de 5 Becas disponibles.
+                } 
+                else 
+                {
+                alert("NO tens BECA");
+                }
+            }
+        while (Numero_Beques != 0)
+
+        //3º Mostramos por pantalla los alumnos con Becas con getElementByID
+        document.getElementById("mostrar").innerHTML = "Estos son los alumnos con Becas: " + "<br><br>" + array_Alumnes.join("<br>");
+
+    </script>
+</body>
+
+</html>

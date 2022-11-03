@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mostrar"></p>
+
+    <script>
+
+        //1º Declaramos variables y pedimos datos:
+        let nom,cognom,edad,respuesta; 
+        nom = prompt ("Introduce tu nombre: ");
+        cognom = prompt ("Introduce tu apellido: ");
+        edad = prompt ("Introduce tu edad: ");
+
+        //2º Preparamos y montamos el mensaje de salida:
+        respuesta ="Hola, te llamas " + nom + " " + cognom + ", y tienes " + edad + " años.";
+        
+        //3º Mostramos por pantalla con los 3 métodos: alert, consola y getElementByID
+        alert(respuesta);
+        console.log(respuesta);
+        document.getElementById("mostrar").innerHTML = respuesta;
+
+    </script>
+</body>
+</html>

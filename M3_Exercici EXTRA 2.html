@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>M3 Exercici Extra2 </h1>
+    <h3>Calcular los litros necearios de pintura para pintar una pared rectangular.</h3>
+    <p id="resultado"></p>
+
+    <script>
+
+        //1º Declaramos dos variables, altura y anchura, para introducir los datos de la pared. 
+        //Y una tercera variable para pedirle al usuario el numero de manos a aplicar.
+
+        let altura = parseInt(prompt ("Introduce la altura de la pared: (metros) "));
+        let anchura = parseInt(prompt ("Introduce la anchura de la pared: (metros) "));
+        let aplicaciones = parseInt(prompt ("Introduce el numero de manos que vas a aplicar: "));
+
+        //Calculamos el area de la pared: base * altura
+        let areapared = altura * anchura;
+
+        //Declaramos una constante COBERTURA, que nos indica cuantos metros cuadrados se puede pintar con 1 litro de pintura. 
+        const COBERTURA = 12;
+
+        //Calculamos los litros necesarios: Seria: areapared X nº aplicaciones / por la cobertura.
+        let litrosnecesarios = (areapared * aplicaciones) / COBERTURA;
+
+        //2º Preparamos la operacion de doble y triple:
+        document.getElementById("resultado").innerHTML = "Los litros necesarios para pintar una pared de " + altura + " x " + anchura + " metros, con " + aplicaciones + " aplicación de pintura, son: " + litrosnecesarios + " litros.";
+   
+    </script>
+</body>
+</html>

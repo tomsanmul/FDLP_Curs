@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.2_Exercici4</title>
+</head>
+
+<body>
+    <h1>M7.2_Exercici4</h1>
+    <p> Realitzar un programa on l’usuari introdueix un número i el programa crida a una funció que retorna el factorial del número introduit.<br>
+        El factorial d'un nombre n (enter, no negatiu) és el producte de tots els nombres enters positius inferiors o iguals a n.<br>
+    </p>
+    <br>
+
+    <h3>Factorial de un Número</h3>
+    <label>Introdueix un numero: </label>
+    <input type="text" id="numero">
+    <input type="button" value="Mostrar el Factorial" onclick="executa()">
+    <br><br>
+    <b> <p id="mostrar"></p> </b>
+
+    <script>
+        function executa() {
+            let numero  = parseInt(document.getElementById("numero").value);
+            let factorial=1;
+
+            for (let i=2; i<= numero; i++){
+                factorial = factorial * i;
+            }
+            document.getElementById("mostrar").innerHTML = "El factorial de " + numero + " es: " + factorial;
+
+        }
+    </script>
+</body>
+
+</html>

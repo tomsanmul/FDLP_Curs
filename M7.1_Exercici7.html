@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.1 Exercici 7</title>
+</head>
+
+<body>
+    <h1>M7.1 Exercici 7</h1>
+    <p>Fer un programa on l’usuari introdueix per pantalla un caràcter i un número. El programa imprimeix per pantalla un quadrat amb la mida i el caràcter introduïts per l’usuari. Exemple: <br>
+        <br>
+        % % % % %
+        <br>
+        % % % % %
+        <br>
+        % % % % %
+        <br>
+        % % % % %
+        <br>
+        % % % % %
+    </p>
+    <br>
+
+    <b id="mostrar"></b>
+
+    <script>
+        let strMostrar = "";
+        let caracater = (prompt("Introdueix un caràter: "));
+        let numero = parseInt(prompt("Introdueix un número: "));
+        
+        //Creamos el cuadrado
+
+        for (let i=1; i<= numero; i++) {
+            for (let j=1; j<= numero; j++) {
+                strMostrar += caracater + " ";  
+            };
+            strMostrar += "<br>";
+        }
+
+        //2º Mostramos StrMostrar
+        document.getElementById("mostrar").innerHTML = strMostrar;
+
+
+    </script>
+</body>
+
+</html>

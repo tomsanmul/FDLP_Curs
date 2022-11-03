@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M6.1_Exercici2</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #0000ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>6.1_Exercici2</h1>
+    <p>Aquest programa calcula l'edat mitjana d'un número de persones introduït per teclat.<br>
+        S'ha de crear una funció que s'encarregui de demanar les edats a l'usuari i de calcular l'edat mitjana.<br>     
+        La funció rebrà per paràmetre el nº de persones a qui ha de demanar l'edat.<br>
+        L'edat de les persones només serà vàlida si està compresa entre 0 i 120 anys.<br>
+        La mitjana de les edats introduïdes s'ha de retornar per la funció (return).<br>
+
+    </p>
+
+    <h3>Mitjana d'edat</h3>
+    <p>Calcula la mitjana d'Edat a partir de una serie d'edats introduïdes.</p>
+
+    <table style="width: 460px; height: 60px;">
+        <tbody>
+            <tr>
+                <td style="width: 171.719px;"><label>Quantes edats de persones introduiràs?</label></td>
+                <td style="width: 80.2812px;"><input id="Edats" size="3" type="text" value="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="button" value="Calcula" onclick="Excecuta()" />
+
+    <br>
+    <b>
+        <p class="result1" id="resultado"></p>
+    </b>
+
+
+    <script>
+        "use strict";
+
+        function CalculaMitjana(Personas) {      
+            let Edad=0;
+            let SumaEdad=0;
+            let MItjana=0;
+
+            for (let i=1; i<=Personas; i++){
+	            Edad = parseInt(prompt("Introdueix una edad válida (entre 0 i 120 anys):"));
+	            if ( ((Edad <0) || (Edad > 120))  || (isNaN(Edad)) ){
+		            alert("Has introduït una Edad no vàlida; repeteixla.");
+		            i--;
+	            }
+                else
+                {
+                    SumaEdad += Edad;
+                }
+            }
+
+            return (SumaEdad / Personas);
+        }
+        
+        function Excecuta() {
+            document.getElementById("resultado").innerHTML = "";
+            let Personas = parseInt(document.getElementById("Edats").value);
+            if (Number(Personas)){
+                let Mitjana = CalculaMitjana(Personas);
+                document.getElementById("resultado").innerHTML = "La mitjana d'Edad de les persones introduïdes es de " + Mitjana.toFixed(2);
+            }
+        }
+            
+    </script>
+</body>
+
+</html>

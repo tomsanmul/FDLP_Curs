@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mostrardoble"></p>
+    <p id="mostrartriple"></p>
+
+    <script>
+
+        //1º Declaramos tres variables, una para introducir, y otra para realizar la media:
+        let numero = parseInt(prompt ("Introduce un numero: "));
+
+        //2º Preparamos la operacion de doble y triple:
+        document.getElementById("mostrardoble").innerHTML = "El doble del numero " + numero + " es: " + (numero * 2);
+        document.getElementById("mostrartriple").innerHTML = "El triple del numero " + numero + " es: " + (numero * 3);
+    </script>
+</body>
+</html>

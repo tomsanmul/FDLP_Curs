@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.2_Exercici7</title>
+</head>
+
+<body>
+    <h1>M7.2_Exercici7</h1>
+    <p> L’usuari introdueix un any a per teclat<br>
+        i el programa crida a una funció que indiqui l’any és de traspàs o no.
+    </p>
+    <br><br>
+
+    <label for="año"> Introdueix un any: </label>
+    <input type="text" id="año">
+
+    <input type="button" value="Comprobar si es bisiesto" onclick="revisar()">
+
+    <p id="mostrar"></p>
+
+
+    <script>
+        function revisar() {
+
+            let año = parseInt(document.getElementById("año").value);
+
+
+            if (((año % 400) == 0) || ((año % 4 == 0) && (año % 100 != 0))) {
+
+                document.getElementById("mostrar").innerHTML = ("El año " + año + " SI es bisiesto.");
+            } else {
+                document.getElementById("mostrar").innerHTML = ("El año " + año + " NO es bisiesto.");
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

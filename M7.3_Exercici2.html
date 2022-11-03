@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.3_Exercici2</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #030303;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>M7.3_Exercici2</h1>
+    <p>En aquest programa l’usuari ha d’introduir un string i, utilitzant un bucle for, el programa ha de mostrar
+        l’string al revés.<br>
+    </p>
+
+    <h3>String al revés</h3>
+    <table style="width: 660px; height: 50px;">
+        <tbody>
+            <tr>
+                <td style="width: 177.266px;"><label>Introdueix una cadena: </label></td>
+                <td style="width: 466.734px;"><input id="cadena" size="60" type="text" value="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><input type="button" value="Invertir Cadena" onclick="executa()" /> <br /></p>
+    <br>
+    <p id="resultado"></p>
+
+
+
+    <script>
+        "use strict";
+
+        function executa() {
+            let cadena = document.getElementById("cadena").value;
+            let reves = "";
+
+            for (let i = cadena.length; i >= 0; i--) {
+                reves += cadena.charAt(i);
+            }
+
+            //alert("La cadena invertida es: " + reves);    
+            document.getElementById("resultado").innerHTML = "La cadena invertida es: " + "<b>" + reves + "</b>";
+        }
+    </script>
+</body>
+
+</html>

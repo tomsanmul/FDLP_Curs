@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 Exercici EXTRA 1</title>
+</head>
+
+<body>
+    <h1>M5 Exercici EXTRA 1</h1>
+    <p> Realitzar un joc per endevinar un nombre aleatori N, entre 1 i 500.<br>
+        Si la distància entre el nombre a endevinar i el de l'usuari és de 50 o més, el programa haurà de dir:<br>
+        “Fred, fred: el teu número és més gran “ o “Fred, fred: el teu número és més petit “<br>
+        Si la distància entre el nombre a endevinar i el de l'usuari està entre 15 i 50, el programa haurà de dir:<br>
+        “Tebi, Tebi: el teu número és més gran “ o “Tebi, Tebi: el teu número és més petit “ <br>
+        I si la distància entre el nombre a endevinar i el de l'usuari i si la distància és menor a 15, el programa
+        haurà de dir:<br>
+        “Calent, calent: el teu número és més gran “ o “Calent, calent: el teu número és més petit “<br>
+        El procés acaba quan l'usuari encerta.<br>
+    </p>
+    <br>
+
+    <p> <input type="button" onclick="Jugar()" value="Comença a jugar..." />
+        <br>
+        <br>
+        <b id="mostrar"></b>
+
+
+
+        <script>
+            function Jugar() {
+                //1º Declaramos e inicializamos las variables 
+                document.getElementById("mostrar").innerHTML = "";
+                let NumOrdinador = Math.floor(Math.random() * 500) + 1;
+                let endevina = false;
+                let numero=0;
+                let resultado="";
+
+                while (!endevina) {
+                    numero = parseInt(prompt("Introdueix un numero"));
+                    if (numero == NumOrdinador) {
+                        resultado = "Enhorabona! Has encertat el número " + NumOrdinador;
+                        endevina = true;
+                    } else {
+
+                        if (numero > NumOrdinador) {
+                            //El numero es més petit"
+                            
+                            if ((numero - NumOrdinador) < 15) {
+                                alert("Calent, calent: el teu número és més petit");
+                            }
+
+                            if (((numero - NumOrdinador) > 15) && ((numero - NumOrdinador) < 50)) {
+                                alert("Tebi, Tebi: el teu número és més petit");
+                            }
+
+                            if ((numero - NumOrdinador) > 50) {
+                                alert("Fred, fred: el teu número és més petit");
+                            }
+
+
+
+                        } else {
+                            //El numero es més gran"
+
+                            if ((NumOrdinador - numero) < 15) {
+                                alert("Calent, calent: el teu número és més gran");
+                            }
+
+                            if (((NumOrdinador - numero) > 15) && ((NumOrdinador - numero) < 50)) {
+                                alert("Tebi, Tebi: el teu número és més gran");
+                            }
+
+                            if ((NumOrdinador - numero) > 50) {
+                                alert("Fred, fred: el teu número és més gran");
+                            }
+
+                        }
+                    }
+
+                }
+
+                //Mostramos el resultado
+                document.getElementById("mostrar").innerHTML = resultado;
+            }
+        </script>
+</body>
+
+</html>

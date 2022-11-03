@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.1 Exercici 8</title>
+</head>
+
+<body>
+    <h1> M7.1 Exercici 8</h1>
+    <p> Crea un programa on l’usuari introdueixi una temperatura en ºC i es mostri per pantalla la conversió en
+        ºFahrenheit.
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos tres variables para introducir, y otra para realizar la media:
+        let tempC, tempF, respuesta;
+        tempC = parseInt(prompt("Introdueix la temperatura en graus Celsius: "));
+
+        //2º Convertimos de Celsius a Farenheit
+        tempF = ((tempC * 9) / 5) + 32;
+
+        //3º Mostramos por pantalla con getElementByID
+        respuesta = "La conversión a ºFahrenheit es: " + tempF;
+        document.getElementById("mostrar").innerHTML = respuesta;
+
+        //alert(respuesta);
+        //console.log(respuesta);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.2_Exercici6</title>
+</head>
+
+<body>
+    <h1>M7.2_Exercici6</h1>
+    <p> L’usuari ha d’introduir números fins que introdueixi un nombre primer. <br>
+        En el moment que l’usuari introdueixi un nombre primer, el programa ha de treure per pantalla el següent missatge: Exacte, el número “x” és primer!<br>
+        Nota: Utilitzar el mètode creat a l'exercici: (M7.2.) Exercici 5<br>
+    </p>
+    <br>
+
+    <h3>Números Primers introduïnt...</h3>
+    <input type="button" value="Comença..." onclick="executa()">
+    <br><br>
+    <b>
+        <p id="mostrar"></p>
+    </b>
+
+    <script>
+        function DetectaPrimo(numero) {
+            let i = 2;
+            let primo = true;
+
+            while(i<numero && primo){
+                if (numero%i == 0){
+                        primo = false;
+                }
+                i++;
+            }
+            return primo;
+        }
+
+
+        function executa() {
+            document.getElementById("mostrar").innerHTML = "";
+            let numero = 0;
+            let esPrimo = false;
+            do{
+                numero = parseInt(prompt("Introdueix un numero:  (fins que aquest sigui primer)"));
+                esPrimo = DetectaPrimo(numero);
+            }
+            while (!esPrimo);
+
+            document.getElementById("mostrar").innerHTML = "El Numero " + numero + " es Primer.";
+
+
+        }
+
+    </script>
+</body>
+
+</html>

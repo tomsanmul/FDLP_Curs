@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const alumnes = [];
+        alumnes.push("Pep");
+        alumnes.push("Paco");
+        alumnes.push("Lluisa");
+        alumnes.push("Aina");
+        alumnes.push("Joan");
+        console.log(alumnes);
+        alumnes.splice(2,0,"Laura");
+        console.log(alumnes);
+        alumnes.splice(2,2,"Rafael");
+        console.log(alumnes);
+        alumnes[0] = "Nuria";
+        console.log(alumnes);
+
+        let nombre = alumnes[0];
+        alert ("El valor de nombre es : " + nombre);
+
+        alert("El array alumnes tiene " + alumnes.length + " posiciones.");
+        
+        alumnes.sort(); //ordena ascendente
+        alert(alumnes);
+
+        alumnes.reverse(); //ordena descendente
+        alert(alumnes);
+
+
+      //Iterar
+      let contenido;
+        for (let valor of alumnes) {
+            contenido += i + " " + valor + '\n';
+            i++;
+            };
+        alert(contenido);
+
+        //Ejemplo, bucle de 5 en 5, desde 5 hasta 100
+        let i = 5
+        for (i=5; i<=100; i+=5){
+            console.log("Numero es igual a " + i);
+        }
+
+        //Lo mismo per descendete
+        for (i=100; i>=5; i-=5){
+            console.log("Numero es igual a " + i);
+        }
+
+        let final = alumnes.length;
+        for (i=0 ; i<final; i++){
+            console.log("Alumno " + i + " se llama " + alumnes[i]);
+
+        }
+
+        //Numero del 30 al 3 de 3 en 3
+        for (i=30 ; i>=3; i-=3){
+            console.log("Numero es " + i);
+
+        }
+
+    </script>
+</body>
+</html>

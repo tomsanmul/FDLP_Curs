@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Exercici EXTRA 3</title>
+</head>
+
+<body>
+    <h1>M4 Exercici EXTRA 3</h1>
+    <p> Escriu un programa que et permet jugar pedra, paper o tisora ​​amb l'ordinador. <br>
+        Per a això l'ordinador haurà de generar un nombre aleatori entre 1 i 3 que representi pedra, paper o tisora
+        ​​respectivament, i l'usuari haurà de respondre al seu torn amb un un nombre entre l'1 i el 3 després de mostrar
+        la següent pantalla:<br>
+        Juguem a pedra, paper o tisora:<br>
+        1. Pedra<br>
+        2. Paper<br>
+        3. Tisora<br>
+        Tria (1-3):<br>
+        Si l'usuari indica algun nombre diferent del sol·licitat, haurà d'aparèixer el següent missatge:<br>
+        «Entenc que no vols jugar. Adéu»<br>
+        En cas contrari, indicar el guanyador de la següent manera:<br>
+        Jo xxx i tu xxx. He guanyat! o Has guanyat!<br>
+        segons sigui el cas.<br>
+
+    </p>
+    <br>
+    <br>
+
+    <b id="mostrar"></b>
+
+    <script>
+        "use strict";
+
+        let strResultat, strOrdinador, strUsuari; // son variables STRINGS  para montar el mensaje final
+
+        let NumUsuari = parseInt(prompt("Tria un numero entre 1 i 3: (1-Pedra,  2-Paper,  3-Tisora"));
+        let NumOrdinador = Math.floor(Math.random() * 3) + 1;
+        
+
+        if ((NumUsuari < 1) || (NumUsuari > 3)) {
+            document.getElementById("mostrar").innerHTML = "Entenc que no vols jugar. Adéu";
+        } 
+
+        else {
+
+            //Averiguo que ha elegido el usuario, 1-> PEDRA , 2-> PAPER, 3-> TISORA. Esto me servirá para montar la frase final resultado.
+
+            switch(NumUsuari){
+                 case 1:  strUsuari = 'PEDRA'; break;
+                 case 2:  strUsuari = 'PAPER'; break;
+                 case 3:  strUsuari = "TISORA"; break;
+            }
+
+
+            //SWITCH PRINCIPAL DEL JUEGO
+            switch (NumOrdinador) {
+
+                case 1: {
+                    strOrdinador = 'PEDRA';
+
+                    if (NumUsuari == 1) {
+                        strResultat = "HEM EMPATAT.";
+                    } else if (NumUsuari == 2) {
+                        strResultat = "HAS GUANYAT!";
+                    } else if (NumUsuari == 3) {
+                        strResultat = "HE GUANYAT!";
+                    }
+                    break;
+                }
+
+                case 2: {
+                    strOrdinador = 'PAPER';
+
+                    if (NumUsuari == 1) {
+                        strResultat = "HE GUANYAT!";
+                    } else if (NumUsuari == 2) {
+                        strResultat = "HEM EMPATAT.";
+                    } else if (NumUsuari == 3) {
+                        strResultat = "HAS GUANYAT!";
+                    }
+                    break;
+                }
+
+                case 3: {
+                    strOrdinador = 'TISORA';
+
+                    if (NumUsuari == 1) {
+                        strResultat = "HAS GUANYAT!";
+                    } else if (NumUsuari == 2) {
+                        strResultat = "HE GUANYAT!";
+                    } else if (NumUsuari == 3) {
+                        strResultat = "HEM EMPATAT.";
+                    }
+                    break;
+                }
+            }
+
+            document.getElementById("mostrar").innerHTML = "Jo " + strOrdinador + "  i tu " + strUsuari + ". " + strResultat;
+        }
+    </script>
+</body>
+
+</html>

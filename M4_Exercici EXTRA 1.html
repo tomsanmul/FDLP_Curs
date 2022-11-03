@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Exercici EXTRA 1</title>
+</head>
+
+<body>
+    <h1>M4 Exercici EXTRA 1</h1>
+    <p> Fes un programa que pregunti a l'usuari dos nombres enters al qual anomenaràs dividend i divisor respectivament.
+        <br>
+        El divisor haurà d'estar comprès entre 2 i 7. <br>
+        En cas contrari, el programa haurà de mostrar un missatge d'error.<br>
+        Si el divisor és correcte (2-7) mostra en pantalla si el dividend és múltiple del divisor, o no.
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        "use strict";
+
+        let divident, divisor, resultat;
+
+        divident = parseInt(prompt("Introdueix el divident:"));
+        divisor = parseInt(prompt("Introdueix el divisor: (ha d'estar comprès entre 2 i 7)"));
+
+        if ((divisor < 2) || (divisor > 7)) {
+            //Missatge d'error
+            alert("El divisor ha d'estar comprès entre 2 i 7");
+        } 
+        else {
+            resultat = divident % divisor;
+            if (resultat == 0) {
+                document.getElementById("mostrar").innerHTML = "El dividend " + divident + " SI es múltiple del " + divisor;
+            } else {
+                document.getElementById("mostrar").innerHTML = "El dividend " + divident + " NO es múltiple del " + divisor;
+            }
+        }
+    </script>
+</body>
+
+</html>

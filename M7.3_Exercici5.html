@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.3_Exercici5</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #030303;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>M7.3_Exercici5</h1>
+    <p>Comprovar si una frase introduïda per l’usuari està formada només per minúscules, només per majúscules o per minúscules i majúscules
+
+    <br>
+    <h3>Comprovar Majúscules i minúscules</h3>
+    <table style="width: 660px; height: 50px;">
+        <tbody>
+            <tr>
+                <td style="width: 177.266px;"><label>Introdueix un Text: </label></td>
+                <td style="width: 466.734px;"><input id="Frase" size="60" type="text" value="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><input type="button" value="Comprova" onclick="executa()" /> <br /></p>
+    <br>
+    <p id="resultado"></p>
+
+
+
+    <script>
+        "use strict";
+
+        function executa() {
+            
+            let cadena = document.getElementById("Frase").value;                    //Leo la cadena de texto.
+            let resultado = "El text está format per MAJÚSCULES i minúscules.";     //1º Asumo por defecto que el texto está formado por MAYÚSUCLAS Y MINUSCULAS.
+
+            //2º Compruebo si todas las letras de la cadena son mayúsuclas:
+            let SoloMayusculas = cadena.toUpperCase(); 
+            if (cadena == SoloMayusculas){
+                resultado = "El text está format només per MAJÚSCULES.";
+            }
+
+             //2º Compruebo si todas las letras son minúsulas:
+             let Solominusculas = cadena.toLowerCase(); 
+             if (cadena == Solominusculas){
+                resultado = "El text está format només per minúscules.";
+            } 
+
+            //4º MUESTRO LA FRASE DEL RESULTADO
+            document.getElementById("resultado").innerHTML = resultado;
+            
+        }
+    </script>
+</body>
+
+</html>

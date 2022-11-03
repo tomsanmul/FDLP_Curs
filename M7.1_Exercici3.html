@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.1 Exercici 3</title>
+</head>
+
+<body>
+    <h1> M7.1 Exercici 3</h1>
+    <p> L’usuari ha d'introduir un número i el programa ha de mostrar per pantalla si el número és parell o imparell.
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos una variable para introducir el numero, y otra que nos dirá el resultado par / impar. 
+        let numero, resultado;
+        numero = parseInt(prompt("Introdueix un numero: "));
+        resultado = numero % 2;
+
+
+        //2º Comprobamos si es par o impar:
+
+        if (resultado == 0) {
+            respuesta = "El numero " + numero + " es parell.";
+        } else if (resultado == 1) {
+            respuesta = "El numero " + numero + " es imparell.";
+        }
+        else
+        {
+            respuesta = "Error, no has introduït un número vàlid.";
+        }
+        //3º Mostramos resultado por pantalla con getElementByID
+        document.getElementById("mostrar").innerHTML = respuesta;
+
+        //alert(respuesta);
+        //console.log(respuesta);
+    </script>
+</body>
+
+</html>

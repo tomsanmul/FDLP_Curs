@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Num1</title>
+</head>
+
+
+<body>
+    <h1>OPERACIONES CON EL NUMERO 10</h1>
+
+    <p id="numero">70</p>
+    <p id="suma"></p>
+    <p id="resta"></p>
+    <p id="multiplica"></p>
+    <p id="divide"></p>
+
+    <p><button onclick="operaciones10()">click</button></p>
+
+    <script>
+        "use strict";
+
+            function operaciones10() {
+            let numero = Number(document.getElementById("numero").innerHTML);
+            //alert("Tipo de la variable numero es " + typeof(numero));
+            document.getElementById("suma").innerHTML = "La suma es " + (numero + 10);
+            document.getElementById("resta").innerHTML = "La resta es " + (numero - 10);
+            document.getElementById("multiplica").innerHTML = "La multiplicación es " + (numero * 10);
+            document.getElementById("divide").innerHTML = "La division es " + (numero / 10);
+
+        }
+    </script>
+
+</body>
+
+</html>

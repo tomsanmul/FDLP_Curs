@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Exercici 5</title>
+</head>
+
+<body>
+    <h1>M4 Exercici 5</h1>
+    <p> Fer un programa que demani dos números i un operador(+,-,*,/).<br>
+        Al final, el programa ha d'imprimir per pantalla el resultat de fer l’operació que contingui la variable operador.
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        let numero1, numero2, operador, resultado;
+        
+        numero1 = parseInt(prompt("Introdueix el primer numero:"));
+        numero2 = parseInt(prompt("Introdueix el segon numero:"));
+        operador = prompt("Introdueix la operación a realitzar: '+' , '-' , '*' , '/'");
+
+        switch (operador) {
+            case "+":
+                resultado = numero1 + numero2;
+                break
+            case "-":
+                resultado = numero1 - numero2;
+                break
+            case "*":
+                resultado = numero1 * numero2;
+                break
+            case "/":
+                resultado = numero1 / numero2;
+                break
+
+            default:
+                document.getElementById("mostrar").innerHTML = "No has introducido un operador ó numero válido";
+                break
+        }
+
+
+        document.getElementById("mostrar").innerHTML = "La operación de " + numero1 + " " + operador + " " + numero2 + " = " + resultado;
+        //alert(mensaje);
+        //console.log(mensaje);
+    </script>
+</body>
+
+</html>

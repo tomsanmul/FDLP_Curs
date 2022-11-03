@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.3_Exercici1</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #0000ff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>M7.3_Exercici1</h1>
+    <p>Realitzar un programa que tingui un menú on se li mostraran 4 opcions a l’usuari per pantalla:<br>
+        1.- Quadrat<br>
+        2.- Triangle<br>
+        3.- Rectangle<br>
+        4.- Cercle<br>
+        Segons l’opció escollida haurà d’introduir unes dades o altres perquè el programa mostri per pantalla l’àrea (el valor) del polígon escollit.<br>
+        <br>
+    </p>
+
+    <h3>Calcula l'Area d'una figura</h3>
+    <table style="width: 250px; height: 50px;">
+        <tbody>
+            <tr>
+                <td style="width: 171px;"><label>Tria una opció: </label></td>
+                <td style="width: 150px;"> <select id="Operacio">
+                        <option value="1" selected="selected">1 - Quadrat</option>
+                        <option value="2">2 - Triangle</option>
+                        <option value="3">3 - Rectangle</option>
+                        <option value="4">4 - Cercle</option>
+                    </select></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <p><input type="button" value="Continuar" onclick="executa()" /> <br /></p>
+    <br>
+    <b><p class="result1" id="resultado"></p></b>
+    <br>
+
+
+
+
+    <script>
+        "use strict";
+
+        function Quadrat() {
+            let base = parseInt(prompt("Introdueix la base del cuadrat:"));
+            let area = base * base;
+            document.getElementById("resultado").innerHTML = "L'àrea del cuadrat es: " + area;
+        }
+
+        function Triangle() {
+            let base = parseInt(prompt("Introdueix la base del triangle:"));
+            let altura = parseInt(prompt("Introdueix la altura del triangle:"));
+            let area = (base * altura)/2;
+            document.getElementById("resultado").innerHTML = "L'àrea del trianle es: " + (area).toFixed(2);
+        }
+
+        function Rectangle() {
+            let base = parseInt(prompt("Introdueix la base del rectangle:"));
+            let altura = parseInt(prompt("Introdueix la altura del rectangle:"));
+            let area = base * altura;
+            document.getElementById("resultado").innerHTML = "L'àrea del rectangle es: " + area; 
+        }
+
+        function Cercle() {
+            const Pi = 3.1416;
+            let radio = parseInt(prompt("Introdueix el radi del cercle: "));
+            let area = (radio ** 2) * Pi;
+            document.getElementById("resultado").innerHTML = "L'àrea del cercle es: " + (area).toFixed(4);
+        }
+
+
+        function executa() {
+            document.getElementById("resultado").innerHTML = "";
+            let Op = document.getElementById("Operacio").value;
+            switch (Op){
+                case "1" : Quadrat();break;
+                case "2" : Triangle();break;
+                case "3" : Rectangle();break;
+                case "4" : Cercle();break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

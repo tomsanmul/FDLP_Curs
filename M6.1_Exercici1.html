@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M6.1_Exercici1</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #0000ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>6.1_Exercici1</h1>
+    <p>Calculadora arcaica. El programa demana a l’usuari que introdueixi dos números i l’operació que desitja
+        realitzar. <br>
+        Cada operació (suma, resta, multiplicació, divisió i mòdul) estarà programada en una funció diferent.<br>
+
+    </p>
+
+    <h3>Calculadora</h3>
+    <p>Introdueix dos numeros per operar:</p>
+
+    <table style="width: 200px; height: 150px;">
+        <tbody>
+            <tr>
+                <td style="width: 171.719px;"><label>Numero 1: </label></td>
+                <td style="width: 80.2812px;"><input id="Num1" size="3" type="text" value="" /></td>
+            </tr>
+            <tr>
+                <td style="width: 171.719px;"><label>Numero 2: </label></td>
+                <td style="width: 80.2812px;"><input id="Num2" size="3" type="text" value="" /></td>
+            </tr>
+            <tr>
+                <td style="width: 171.719px;"><label>Operació: </label></td>
+                <td style="width: 80.2812px;"> <select id="Op">
+                        <option value="+" selected="selected">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="button" value="Calcula" onclick="Calcula()" />
+
+    <br>
+    <b>
+        <p class="result1" id="resultado"></p>
+    </b>
+
+
+
+
+    <script>
+        "use strict";
+
+        function Suma(Num1, Num2) {
+            return (Num1 + Num2);
+        }
+
+        function Resta(Num1, Num2) {
+            return (Num1 - Num2);
+        }
+
+        function Multiplica(Num1, Num2) {
+            return (Num1 * Num2);
+        }
+
+        function Divide(Num1, Num2) {
+            return (Num1 / Num2);
+        }
+
+        function Modul(Num1, Num2) {
+            return (Num1 % Num2);
+        }
+
+
+        function Calcula() {
+            document.getElementById("resultado").innerHTML = "";
+            let Num1 = parseInt(document.getElementById("Num1").value);
+            let Num2 = parseInt(document.getElementById("Num2").value);
+
+            if (Number(Num1) && (Number(Num2))) {
+
+                    let Op = document.getElementById("Op").value;
+                    let resultado = 0;
+                    switch (Op) {
+                        case '+':
+                            resultado = Suma(Num1, Num2);
+                            break;
+                        case '-':
+                            resultado = Resta(Num1, Num2);
+                            break;
+                        case '*':
+                            resultado = Multiplica(Num1, Num2);
+                            break;
+                        case '/':
+                            resultado = Divide(Num1, Num2);
+                            break;
+                        case '%':
+                            resultado = Modul(Num1, Num2);
+                            break;
+                    }
+                    document.getElementById("resultado").innerHTML = "El resultat de " + Num1 + " " + Op + " " + Num2 + " = " + resultado;
+
+                }
+
+            }
+    </script>
+</body>
+
+</html>

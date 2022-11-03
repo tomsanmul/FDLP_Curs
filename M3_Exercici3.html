@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mostrar"></p>
+
+
+    <script>
+
+        //1º Declaramos tres variables para introducir, y otra para realizar la media:
+        let numero1,numero2,numero3,resultado; 
+        numero1 = parseFloat(prompt ("Introduce el primer numero: "));
+        numero2 = parseFloat(prompt ("Introduce el segundo numero: "));
+        numero3 = parseFloat(prompt ("Introduce el tercer numero: "));
+        resultado = parseFloat((numero1 + numero2 + numero3) / 3).toFixed(2);
+
+        //2º Preparamos las operaciones y mostramos el mensaje de salida con getElementById:
+        document.getElementById("mostrar").innerHTML = "La media de los numeros: " + numero1 + " , " + numero2 + " y " +  numero3 + " es: " + resultado;
+
+    </script>
+</body>
+</html>

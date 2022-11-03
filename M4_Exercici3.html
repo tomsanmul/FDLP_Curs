@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Exercici 3</title>
+</head>
+
+<body>
+    <h1> M4 Exercici 3</h1>
+    <p> Una escola d’idiomes concedeix beques a futurs estudiants si compleixen una sèrie de requisits.<br>
+        A l'alumne se li assigna una beca si és major d’edat i si té un títol universitari.<br>
+        O també se li assigna una beca si l’alumne està a l’atur. <br>
+        El programa demana les tres dades per pantalla i en finalitzar mostra si l’alumne té la beca o no.</p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos variables y pedimos datos:
+        let edad, titol, atur, respuesta;
+
+        edad = parseInt(prompt("Introdueix la teva edad: "));
+        titol = confirm("Tens Títol Universitari? Si es així prem ACCEPTAR");
+        atur = confirm("Estas a l'Atur? SI es així prem ACCEPTAR");
+
+
+
+        //2º En funón de las respuestas mostramos el mensaje de salida:
+
+        if (((edad >= 18) && (titol)) || (atur)) {
+            respuesta = "SI tens BECA";
+        } else {
+            respuesta = "NO tens BECA";
+        }
+
+        //3º Mostramos por pantalla con getElementByID
+        document.getElementById("mostrar").innerHTML = respuesta;
+
+        //alert(respuesta);
+        //console.log(respuesta);
+    </script>
+</body>
+
+</html>

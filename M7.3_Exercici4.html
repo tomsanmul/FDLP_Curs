@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.3_Exercici4</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.result1 {
+            font-family: new times roman;
+            color: #030303;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>M7.3_Exercici4</h1>
+    <p>L’usuari ha d’introduir un DNI i el programa ha de dir si la lletra és correcte o no amb el nombre de DNI. Si la lletra no és correcta, ha de dir quina lletra és la correcta.<br>
+        Per calcular la lletra DNI has de prendre el número de DNI a verificar i dividir-lo entre 23. La resta es reemplaça per una lletra que ja està assignada a aquest nombre mitjançant la taula adjunta:<br>
+
+        <p>RESTO: | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |11 |12 |13 |14 |15 |16 |17 |18 |19 |20 |21 |22 |</p>
+        <p>LETRA: | T | R | W | A | G | M | Y | F | P | D | X | B | N | J | Z | S | Q | V | H | L | C | K | E |</p>
+
+    <br>
+    <h3>Averiguar si es correcte la lletra del DNI</h3>
+    <table style="width: 660px; height: 50px;">
+        <tbody>
+            <tr>
+                <td style="width: 177.266px;"><label>Introdueix un DNI: </label></td>
+                <td style="width: 466.734px;"><input id="DNI" size="60" type="text" value="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><input type="button" value="Comprova DNI" onclick="executa()" /> <br /></p>
+    <br>
+    <p id="resultado"></p>
+
+
+
+    <script>
+        "use strict";
+
+        function executa() {
+
+            const letra = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+            let letraOK, calculo;
+            let dni = (String(document.getElementById("DNI").value)).toUpperCase();
+            let letraUser = dni.charAt(dni.length - 1);
+            let numDNI = parseInt(dni);
+
+            calculo = numDNI % 23;
+            letraOK = letra[calculo];
+           
+            if (letraOK == letraUser) {
+            document.getElementById("resultado").innerHTML = "El número de DNI ''<b>" + document.getElementById("DNI").value +
+                "''</b> " + " es vàlid.";
+            }
+            else
+            {
+            document.getElementById("resultado").innerHTML = "El número de DNI ''<b>" + document.getElementById("DNI").value +
+                "''</b> " + " NO es vàlid. El vàlid seria: ''<b>" + numDNI + letraOK + "''</b> ";
+            }
+        }
+    </script>
+</body>
+
+</html>

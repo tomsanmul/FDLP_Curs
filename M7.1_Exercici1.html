@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.1 Exercici 1</title>
+</head>
+
+<body>
+    <h1> M7.1 Exercici 1</h1>
+    <p> Crea un programa on l’usuari introdueix tres notes i el programa calculi la mitja. <br>
+        Si la mitja és inferior a 5 ha de mostrar el següent missatge per pantalla: “No has superat el curs. Has de recuperar”, <br>
+        si la mitja està entre 5 i 7 ha de mostrar: “Enhorabona! Has aprovat però hauries de seguir practicant”, <br>
+        si la mitja és superior a 7 ha de mostrar: ”Enhorabona! Has superat el curs! Passa ja al següent nivell! <br>
+
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos tres variables para introducir, y otra para realizar la media:
+        let numero1,numero2,numero3,resultado, respuesta; 
+
+        numero1 = parseFloat(prompt ("Introduce el primer numero: "));
+        numero2 = parseFloat(prompt ("Introduce el segundo numero: "));
+        numero3 = parseFloat(prompt ("Introduce el tercer numero: "));
+        resultado = parseFloat((numero1 + numero2 + numero3) / 3).toFixed(2);
+
+
+
+        //2º En funón de las respuestas mostramos el mensaje de salida:
+
+        if (resultado < 5) {
+            respuesta = "No has superat el curs. Has de recuperar";
+        } 
+        else if ((resultado >= 5) && (resultado <=7)) {
+            respuesta = "Enhorabona! Has aprovat però hauries de seguir practicant";
+        }
+        else if (resultado > 7) {
+            respuesta = "Enhorabona! Has superat el curs! Passa ja al següent nivell!";
+        }
+
+        //3º Mostramos por pantalla con getElementByID
+        document.getElementById("mostrar").innerHTML = respuesta;
+
+        //alert(respuesta);
+        //console.log(respuesta);
+    </script>
+</body>
+
+</html>

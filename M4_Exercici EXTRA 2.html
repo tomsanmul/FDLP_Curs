@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Exercici EXTRA 2</title>
+</head>
+
+<body>
+    <h1>M4 Exercici EXTRA 2</h1>
+    <p> Demana a l'usuari un número entre 0 i 99 i mostra'l escrit en lletres (pots fer-ho en català o castellà). <br>
+        Exemple: 56 (cinquanta-sis) o 56 (cincuenta y seis)
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        "use strict";
+
+        let numero, decena, unidad, strUnidad, strTextoFinal;
+
+        numero = parseInt(prompt("Introdueix un numero entre 0 i 99:"));
+        decena = parseInt(numero / 10);
+        unidad = parseInt(numero - (decena*10));
+
+
+    //PRIMERO me guardo la unidad en formato Texto, para usarla más abajo.
+    switch (unidad)
+            {
+            case 0: strUnidad= "cero";break;
+            case 1: strUnidad = "uno";break;
+            case 2: strUnidad = "dos";break;
+            case 3: strUnidad = "tres";break;
+            case 4: strUnidad = "cuatro";break;
+            case 5: strUnidad = "cinco";break;
+            case 6: strUnidad = "seis";break;
+            case 7: strUnidad = "siete";break;
+            case 8: strUnidad = "ocho";break;
+            case 9: strUnidad = "nueve";break; 
+            }
+
+ 
+    switch (decena)
+            {
+                case 0: 
+                        strTextoFinal = strUnidad;break; 
+
+                case 1: {
+
+                    switch(unidad)
+                        {
+                        case 0: strTextoFinal = "diez";break;
+                        case 1: strTextoFinal = "once";break;
+                        case 2: strTextoFinal = "doce";break;
+                        case 3: strTextoFinal = "trece";break;
+                        case 4: strTextoFinal = "catorce";break;
+                        case 5: strTextoFinal = "quince";break;
+                        case 6: strTextoFinal = "dieciseis";break;
+                        case 7: strTextoFinal = "diecisiete";break;
+                        case 8: strTextoFinal = "dieciocho";break;
+                        case 9: strTextoFinal = "diecinueve";break;                                    
+                        }
+                        break; 
+                    }
+
+
+                case 2: strTextoFinal = (unidad == 0) ? "veinte" : "veinti" + strUnidad;break;
+                case 3: strTextoFinal = (unidad == 0) ? "treinta" : "treintay" + strUnidad;break;
+                case 4: strTextoFinal = (unidad == 0) ? "cuarenta" : "cuarentay" + strUnidad;break;
+                case 5: strTextoFinal = (unidad == 0) ? "cincuenta" : "cincuentay" + strUnidad;break;
+                case 6: strTextoFinal = (unidad == 0) ? "sesenta" : "sesentay" + strUnidad;break;
+                case 7: strTextoFinal = (unidad == 0) ? "setenta" : "setentay" + strUnidad;break;
+                case 8: strTextoFinal = (unidad == 0) ? "ochenta" : "ochentay" + strUnidad;break;
+                case 9: strTextoFinal = (unidad == 0) ? "noventa" : "noventay" + strUnidad;break;
+
+            }
+
+            document.getElementById("mostrar").innerHTML = strTextoFinal;
+        
+    </script>
+</body>
+
+</html>

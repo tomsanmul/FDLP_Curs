@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 Exercici 3</title>
+</head>
+
+<body>
+    <h1>M5 Exercici 3</h1>
+    <p> Aquesta línia de codi: Math.ceil((Math.random() * 10));  Retorna un número entre el 0 i el 10 de forma aleatòria. <br>
+        L’exercici consisteix a què l’usuari ha d'endevinar el número escollit aleatòriament pel programa. <br>      
+        El programa, demana números a l’usuari fins que aquest encerti el número aleatori generat pel programa. <br>
+        Un cop l’usuari ha endevinat el número, es mostrarà per pantalla el següent missatge: “Enhorabona, el número era X” <br>
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+
+        //1º Creamos numero aleatorio en 1 y 10. Def
+        let numero = Math.ceil((Math.random() * 10));
+        
+        //Entramos en bucle, mientras no adivinemos el numero Random   
+        let num_Usuari=0;
+        do {
+            num_Usuari = parseInt(prompt("Introdueix un numero del 1 al 10 per adivinar...."));    
+
+        } while (numero != num_Usuari);
+
+        //Salida del bucle porque lo adivinamos. Mostramos por pantalla con alert.
+        alert("Enhorabona, el número era " + numero);
+
+    </script>
+</body>
+
+</html>

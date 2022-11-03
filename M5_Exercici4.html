@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 Exercici 4</title>
+</head>
+
+<body>
+    <h1>M5 Exercici 4</h1>
+    <p> Has de modificar el programa anterior per afegir una nova funcionalitat: establir un número màxim de 5
+        intents.<br>
+        Si l’usuari encerta el número escollit pel programa abans d'aquests 5 intents, el programa mostra el següent
+        missatge per pantalla: “Enhorabona, el número és X i has necessitat Y intents per encertar-lo”.<br>
+        Si no encerta el número abans de 5 intents, el programa mostra per pentalla: "Has utilitzat massa intents! El
+        número és X ".<br>
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Creamos numero aleatorio en 1 y 10. Def
+        let numero = Math.ceil((Math.random() * 10));
+
+        //Entramos en bucle, mientras no adivinemos el numero Random   
+        let num_Usuari = 0;
+        let intents = 0;
+        do {
+            num_Usuari = parseInt(prompt("Introdueix un numero del 1 al 10 per adivinar...."));
+            intents++;
+        } while ((numero != num_Usuari) && (intents < 5));
+
+
+
+        //Salida del bucle porque lo adivinamos o porque excedemos de los 5 intentos. Mostramos por pantalla
+
+        if (intents < 5) {
+            //alert("Enhorabona, el número és " + numero + " i has necessitat " + intents + " intents per encertar-lo");
+            document.getElementById("mostrar").innerHTML = "Enhorabona, el número és " + numero + " i has necessitat " +
+                intents + " intents per encertar-lo";
+        } else {
+            //alert("Has utilitzat massa intents! El número és " + numero);
+            document.getElementById("mostrar").innerHTML = "Has utilitzat massa intents! El número és " + numero;
+        }
+    </script>
+</body>
+
+</html>

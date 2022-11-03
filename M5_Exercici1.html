@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 Exercici 1</title>
+</head>
+
+<body>
+    <h1>M5 Exercici 1</h1>
+    <p> Fer un programa amb una caixa de text i un botó. L’usuari introdueix el nombre de paraules que vol introduir en el camp de text, al fer clic en el botó apareixen tants “prompts” com el nombre de paraules que ha dit l’usuari que volia introduir.<br> 
+        Les paraules es guarden en un array i un cop han sigut totes introduïdes, es mostren per pantalla.</p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+
+        //1º Declaramos variables y pedimos el numero de palabras a introducir
+        let arrayPalabras = [], NumeroPalabras, Palabra;
+        NumeroPalabras = prompt("Introduce el numero de palabras a introducir en el array: ");
+
+        //2º Preparamos el bucle
+        for (let i = 1; i<=NumeroPalabras; i++){
+            Palabra = prompt("Introduce la palabra " + i );    
+            arrayPalabras.push(Palabra);
+        }
+
+        //3º Mostramos por pantalla el Array
+        document.getElementById("mostrar").innerHTML = arrayPalabras;
+
+    </script>
+</body>
+
+</html>

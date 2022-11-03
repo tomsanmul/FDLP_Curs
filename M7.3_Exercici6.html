@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.3_Exercici6</title>
+</head>
+
+<body>
+    <h1>M7.3_Exercici6</h1>
+    <p>Dona’t un array de números, el programa ha de mostrar la suma de tots els números parells i la suma de tots els
+        números imparells.<br>
+        <br>
+    </p>
+    <br>
+
+    <h3>Suma de Parells i Imparells a partir d'un array introduït.</h3>
+    <label>Introdueix una serie de numeros separats per una coma: </label>
+    <input type="text" value="1, 2, 3, 4, 5, 6, 7, 8" id="lista">
+    <input type="button" value="Continuar" onclick="executa()">
+    <br><br>
+    <b>
+        <p id="mostrar"></p>
+        <p id="SumaPares"></p>
+        <p id="SumaImpares"></p>
+    </b>
+
+    <script>
+        "use strict";
+
+        function executa() {
+
+
+            let ListaNumeros = [];
+            //Primero borro los espacios en blanco de la cadena texto, Y después uso la coma ',' como separador al introducirlo en el Array. 
+            ListaNumeros = (document.getElementById("lista").value.split(" ").join("")).split(",");
+            
+            let SumaPares = 0;
+            let SumaImpares = 0;
+
+            for (let i = 0; i < ListaNumeros.length; i++) {     
+
+                        if (parseInt(ListaNumeros[i]) % 2 == 0) { // Si el numero es par, lo sumo a la variable SumaPares               
+                            SumaPares += parseInt(ListaNumeros[i]);
+                        } 
+                        else if (Number(ListaNumeros[i]))
+                        { // Sino, el numero es impar y lo añado a la variable SumaImpares. Antes compruebo que se Numero.
+                            SumaImpares += parseInt(ListaNumeros[i]);
+                        }
+                    }
+                
+
+            document.getElementById("mostrar").innerHTML = "Valors en el Array: " + ListaNumeros;
+            document.getElementById("SumaPares").innerHTML = "La suma de Parells es: " + SumaPares;
+            document.getElementById("SumaImpares").innerHTML = "La suma de Imparells es: " + SumaImpares;
+
+        }
+    </script>
+</body>
+
+</html>

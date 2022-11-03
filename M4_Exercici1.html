@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Exercici 1)</title>
+</head>
+
+<body>
+    <h1> M4 Exercici 1</h1>
+    <p> Modifica l’exercici 1 del mòdul 3. Un cop introduïdes les dades, el programa ha de mostrar el següent per
+        pantalla:<br>
+        - Si l’usuari té 18 anys o més: “Nom Cognom, ets MAJOR d’edat”<br>
+        - Si l’usuari és menor de 18 anys: “Nom Cognom, ets MENOR d’edat”.</p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos variables y pedimos datos:
+        let nom, cognom, edad, respuesta;
+        nom = prompt("Introduce tu nombre: ");
+        cognom = prompt("Introduce tu apellido: ");
+        edad = prompt("Introduce tu edad: ");
+
+        //2º Preparamos y montamos el mensaje de salida:
+        if (edad >= 18) {
+            respuesta = nom + " " + cognom + ", eres MAYOR de edad.";
+        } else {
+            respuesta = nom + " " + cognom + ", eres MENOR de edad.";
+        }
+        //3º Mostramos por pantalla con getElementByID
+        document.getElementById("mostrar").innerHTML = respuesta;
+
+        //alert(respuesta);
+        //console.log(respuesta);
+    </script>
+</body>
+
+</html>

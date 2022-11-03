@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.2_Exercici3</title>
+</head>
+
+<body>
+    <h1>M7.2_Exercici3</h1>
+    <p> Fes un programa que mostri el següent per pantalla: <br>
+
+        * <br>
+        * * <br>
+        * * * <br>
+        * * * * <br>
+        * * * * * <br>
+        * * * * * * <br>
+        * * * * * <br>
+        * * * * <br>
+        * * * <br>
+        * * <br>
+        * <br>
+        
+        La línea amb més “*” vindrà donada per un número que l’usuari introduirà per teclat.<br>
+        Condició: En tot el codi del programa només hi pot haver-hi dos * <br>
+        També, a poder ser, no utilitzis cap mètode com repeat() o substring() de la classe String <br>
+    </p>
+    <br><br>
+    <b id="mostrar"></b>
+
+    
+    <script>
+        let lineas = parseInt(prompt("Introdueix el nombre de lineas: "));
+        let Mostrar="";
+
+        for(let j=1; j<=lineas; j++){
+
+            for(let i=1; i<=j; i++){
+                Mostrar += "* ";
+            }
+            Mostrar += "<br>";
+
+        }
+
+        lineas--; //resto 1 unidad a la linea para que no me la repita
+
+        for(let j=lineas; j>0; j--){
+
+            for(let i=1; i<=j; i++){
+                Mostrar += "* ";
+            }
+            Mostrar += "<br>";
+        }
+
+    
+
+    document.getElementById("mostrar").innerHTML = Mostrar;
+
+    </script>
+</body>
+
+</html>

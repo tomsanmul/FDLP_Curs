@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 Exercici EXTRA 2</title>
+</head>
+
+<body>
+    <h1>M5 Exercici EXTRA 2</h1>
+    <p> Aquest exercici NO és obligatori, només has de fer-lo si et sobra temps i has acabat la resta d'exercicis més ràpid que la resta de la classe.<br>
+        Realitza un programa que pinti la lletra L per pantalla feta amb asteriscs.<br>
+        El programa demanarà l'altura.<br>
+        El pal horitzontal de la L tindrà una longitud de la meitat (divisió entera entre 2) de l'altura més un.<br>
+        Exemple:<br>
+            Introduïu l'alçada de la L : 5<br>
+            La base serà la divisió del nombre entre 2 : (5 / 2) + 1 = 3<br>
+         <br>
+        *<br>
+        *<br>
+        *<br>
+        *<br>
+        * * *<br>
+        
+        </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos variables y pedimos datos:
+        let altura = parseInt(prompt("Introdueix la altura"));
+        let base = parseInt((altura / 2)) + 1;
+        let Mostrar = "";
+
+        //Montamos el gráfico "L" , prmiero la altura con un FOR y despues la base con otro FOR, 
+        //que no estén anidados, sino uno después del otro.
+        for(let j=1; j<=(altura-1); j++){
+            Mostrar += "*<br>";
+        }
+        
+        for(let i=1; i<=base; i++){
+            Mostrar += "* ";
+        }
+
+        //Mostramos el resultado
+        document.getElementById("mostrar").innerHTML = Mostrar;
+
+    </script>
+</body>
+
+</html>

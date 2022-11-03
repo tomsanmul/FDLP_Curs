@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.1 Exercici 4</title>
+</head>
+
+<body>
+    <h1> M7.1 Exercici 4</h1>
+    <p> L’usuari ha d’introduir dos números, el programa retornarà “Un dels dos números és negatiu”, només si un dels
+        dos números és negatiu.
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos dos variables para introducir los numeros:
+        let numer1, numero2, resultado;
+        numero1 = parseInt(prompt("Introdueix el primer numero: "));
+        numero2 = parseInt(prompt("Introdueix el segon numero: "));
+        resultado = numero1 * numero2;
+
+
+        //2º En funón de los numeros introducidos mostramos el mensaje de salida si alguno es negativo:
+
+        if (resultado  < 0) {
+            document.getElementById("mostrar").innerHTML = "Un dels dos números és negatiu";
+        }
+
+
+    </script>
+</body>
+
+</html>

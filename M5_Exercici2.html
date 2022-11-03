@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 Exercici 2</title>
+</head>
+
+<body>
+    <h1>M5 Exercici 2</h1>
+    <p> El programa demana dos números enters i llavors calcula la suma dels valors compresos entre els dos números, inclosos. <br>
+        Exemple: 4 i 6  --> resultat = 4 + 5 + 6 = 15</p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+
+        //1º Declaramos variables y pedimos el numero de palabras a introducir      
+        let Num1 = parseInt(prompt("Introdueix el primer número:"));
+        let Num2 = parseInt(prompt("Introdueix el segon número:"));
+        let suma = 0;  
+        let Texto = "La suma de ";
+
+        //Compruebo que el primer numero sea más pequeño que el segundo, ya que sino tenemos que girarlos para que no falle el bucle.  
+        if (Num1 > Num2){
+            let tempNum1 = Num1;
+            Num1 = Num2;
+            Num2 = tempNum1;
+        }
+
+
+        //2º Preparamos el bucle
+        for (let i = Num1; i<=Num2; i++){
+           suma += i;    
+           Texto = (i < Num2) ? Texto + i + " + " : Texto + i;
+        }
+
+        //3º Mostramos por pantalla la sumna entre ambos numeros con Alert y getElementByID
+        alert(Texto + " = " + suma);
+        document.getElementById("mostrar").innerHTML = Texto + " = " + suma;
+
+    </script>
+</body>
+
+</html>

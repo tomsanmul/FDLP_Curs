@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.1 Exercici 5</title>
+</head>
+
+<body>
+    <h1>M7.1 Exercici 5</h1>
+    <p> Mostra per pantalla els nombres parells compresos entre el 100 i el 0 en ordre descendent.
+    </p>
+    <br>
+    <b id="mostrar"></b>
+
+    <script>
+        //1º Declaramos el array
+        let arrayNumerosPares = [];
+
+        //rellenamos el array solo con los numeros pares, empezando de 100 hasta 0
+        for (let i=100; i>= 0; i-=2) {
+            arrayNumerosPares.push(i);
+            };
+
+
+        //2º Mostramos el array
+        document.getElementById("mostrar").innerHTML = arrayNumerosPares.join("<br>");
+
+
+    </script>
+</body>
+
+</html>

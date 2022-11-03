@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7.2_Exercici8</title>
+</head>
+
+<body>
+    <h1>M7.2_Exercici8</h1>
+    <p>L’usuari introdueix un nombre per teclat i el programa crida a una funció que ha de mostrar la successió de Fibonacci.<br>
+        Exemple:<br>
+        Si l’usuari introdueix el 10 el resultat ha de ser: 0,1,1,2,3,5,8,13,21,34<br>
+        <br>
+    </p>
+    <br>
+
+    <h3>Successió de Fibonacci</h3>
+    <label>Introdueix un numero: </label>
+    <input type="text" id="numero">
+    <input type="button" value="Mostrar la successió de Fibonacci" onclick="executa()">
+    <br><br>
+    <b>
+        <p id="mostrar"></p>
+    </b>
+
+    <script>
+        function executa() {
+            let numero = parseInt(document.getElementById("numero").value);
+
+            let arrayFibo = [];
+            arrayFibo.push(0);
+            arrayFibo.push(1);
+
+            let penultimo = 0;
+            let ultimo = 0; 
+
+            if (numero >=2){
+                for (let i=2; i<numero; i++){
+                    penultimo = arrayFibo[(i-2)];
+                    ultimo = arrayFibo[(i-1)];
+                    arrayFibo.push(penultimo + ultimo); 
+                }
+                document.getElementById("mostrar").innerHTML = "La successió de Fibonacci es: " + arrayFibo;
+            }
+            else if (numero == 1){
+                document.getElementById("mostrar").innerHTML = "La successió de Fibonacci es: 0";               
+            }
+            else if (numero == 0){
+                document.getElementById("mostrar").innerHTML = "Error, escribe un numero mayor que 0";               
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
